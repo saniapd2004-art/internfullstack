@@ -26,6 +26,10 @@ app.use(express.json());
 /* =======================
    ROUTES
 ======================= */
+app.get("/", (req, res) => {
+  res.send("TaskFlow API is running successfully! 🚀");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 
